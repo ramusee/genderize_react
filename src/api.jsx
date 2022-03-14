@@ -1,9 +1,9 @@
-import { countries } from './country.jsx';
+import { countries } from './country.js';
 const URLS = {
   GENDER: 'https://api.genderize.io',
   COUNTRY: 'https://api.nationalize.io',
 };
-export async function sendRequest(userName) {
+export async function getNameInfo(userName) {
   const nameInfo = {};
   const urlGender = `${URLS.GENDER}?name=${userName}`;
   const responseName = await fetch(urlGender);
@@ -21,6 +21,5 @@ export async function sendRequest(userName) {
   } catch {
     nameInfo.country = `Country not found`;
   }
-  console.log(nameInfo);
   return nameInfo;
 }

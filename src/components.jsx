@@ -7,8 +7,8 @@ function Button() {
 function Output(props) {
   return (
     <div className="form__result">
-      <p className="result__gender">{props.resultUserInfo.gender || props.resultUserInfo || 'Who to guess?'} </p>
-      <p className="result__country">{props.resultUserInfo.country} </p>
+      <p className="result__gender">{props.resultNameInfo.gender || props.resultNameInfo || 'Who to guess?'} </p>
+      <p className="result__country">{props.resultNameInfo.country} </p>
     </div>
   );
 }
